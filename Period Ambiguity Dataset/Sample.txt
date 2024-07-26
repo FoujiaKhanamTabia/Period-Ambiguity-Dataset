@@ -1,0 +1,1 @@
+In the csv file you will have the complete data which contains 18,000 text data (Sentence) with the target features.
