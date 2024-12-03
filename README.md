@@ -8,4 +8,4 @@ This repository focuses on resolving ambiguities in terminal punctuation, specif
 - **Algorithms**: Implementation of state-of-the-art machine learning models, such as decision trees, SVMs, and deep learning architectures, optimized for punctuation disambiguation.
 - **Evaluation Metrics**: Rigorous testing using precision, recall, and F1-score to assess model performance across various linguistic domains.
 - **Applications**: Insights into how this approach enhances downstream NLP tasks like sentiment analysis, machine translation, and automated summarization.
-- This repository is designed to serve as a foundational resource for researchers, developers, and linguists interested in enhancing the precision of English text processing using machine learning.
+This repository is designed to serve as a foundational resource for researchers, developers, and linguists interested in enhancing the precision of English text processing using machine learning.
