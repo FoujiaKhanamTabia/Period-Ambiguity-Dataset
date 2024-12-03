@@ -10,3 +10,35 @@ This repository focuses on resolving ambiguities in terminal punctuation, specif
 - **Applications**: Insights into how this approach enhances downstream NLP tasks like sentiment analysis, machine translation, and automated summarization.
 
 This repository is designed to serve as a foundational resource for researchers, developers, and linguists interested in enhancing the precision of English text processing using machine learning.
+
+# Comparison with Existing Datasets
+In the domain of terminal punctuation disambiguation, existing datasets often focus broadly on general punctuation, without explicitly addressing the nuanced challenges of period identification in diverse linguistic contexts. This project introduces a dataset meticulously designed to overcome these limitations, offering a targeted and comprehensive approach. Below is a comparison:
+
+1. **General Punctuation Datasets**
+Penn Treebank: 
+Includes sentence-level annotations but lacks specific focus on period disambiguation.
+OntoNotes Corpus: Provides a wide range of linguistic annotations; however, punctuation marks like periods are not annotated with fine-grained distinctions.
+
+Limitations:
+Do not differentiate between periods used as sentence delimiters, in abbreviations, or as decimal points.
+Lack of contextual metadata, which is essential for resolving ambiguities in complex scenarios.
+
+2. **Specialized Punctuation Datasets**
+Universal Dependencies (UD) Corpora: Annotates punctuation as part of syntactic structure but treats periods generically, without considering their multifunctional nature.
+GUM Corpus (Georgetown University Multilayer Corpus): While it provides richer context, the dataset still lacks focused examples for distinguishing abbreviations, decimals, and sentence-ending periods.
+
+Limitations:
+Often include small subsets of punctuation-specific annotations.
+Fail to provide diverse linguistic contexts, such as informal text (e.g., social media), where period usage can differ significantly.
+
+**Our Dataset Advantages**
+Focus on Period Disambiguation:
+Specifically curated to distinguish between sentence-ending periods, abbreviations, and decimal points, ensuring precise annotations.
+
+- Diverse Contexts: Covers formal, informal, and mixed linguistic domains, including conversational texts, technical documents, and user-generated content.
+- Rich Metadata: Includes contextual features such as surrounding words, syntactic roles, and semantic cues to aid machine learning models in accurate classification.
+- Comprehensive Annotations: Annotated by linguistic experts with quality checks, ensuring accuracy and consistency.
+- Machine Learning Ready: Provides structured formats and splits for training, validation, and testing, optimized for machine learning pipelines.
+
+This dataset sets a new benchmark in addressing the complexities of terminal punctuation disambiguation, offering researchers a robust foundation for advancing natural language understanding.
+
