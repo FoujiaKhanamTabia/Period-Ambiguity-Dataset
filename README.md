@@ -116,3 +116,15 @@ This repository can be used for:
 - Improving tokenization and parsing in downstream linguistic pipelines
 - Training more robust punctuation-specific models
 
+
+Here’s the revised Suggested Areas for Further Research in a concise, paragraph format:
+
+# Suggested Areas for Further Research
+This work opens several avenues for enhancing terminal punctuation disambiguation. Expanding the dataset to include informal texts, multilingual contexts, and noisy data would improve the model’s generalization. Future studies could explore advanced models like transformers, reinforcement learning, or multi-task learning to capture intricate patterns in punctuation usage. Real-time disambiguation, especially in live systems like chatbots or multilingual processing, is another promising direction. Error analysis and fine-grained labeling can provide insights into model failures and help refine outputs. Integration with broader NLP pipelines, such as text-to-speech systems and summarization tools, offers practical applications. Additionally, incorporating human feedback through active learning or crowdsourcing can enhance model adaptability. Ethical considerations, such as bias detection and data privacy, should remain a priority to ensure responsible development and deployment.
+
+# Conclusion
+The accurate identification and disambiguation of terminal punctuation, particularly periods, are critical for advancing English linguistic processing. This repository addresses this challenge by presenting a targeted dataset, robust machine learning implementations, and comprehensive evaluation metrics. By leveraging contextual features and diverse linguistic scenarios, the proposed methods enhance the understanding of period usage, distinguishing sentence terminators from abbreviations and decimal points with greater precision.
+
+**THANK YOU** <br>
+**Foujia Khanam Tabia** <br>
+**Email: foujiatabia.cse.ugv@gmail.com**
