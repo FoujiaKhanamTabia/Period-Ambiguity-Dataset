@@ -15,21 +15,16 @@ This repository is designed to serve as a foundational resource for researchers,
 In the domain of terminal punctuation disambiguation, existing datasets often focus broadly on general punctuation, without explicitly addressing the nuanced challenges of period identification in diverse linguistic contexts. This project introduces a dataset meticulously designed to overcome these limitations, offering a targeted and comprehensive approach. Below is a comparison:
 
 1. **General Punctuation Datasets**
-Penn Treebank: 
-Includes sentence-level annotations but lacks specific focus on period disambiguation.
+Penn Treebank: Includes sentence-level annotations but lacks specific focus on period disambiguation.
 OntoNotes Corpus: Provides a wide range of linguistic annotations; however, punctuation marks like periods are not annotated with fine-grained distinctions.
 
-Limitations:
-Do not differentiate between periods used as sentence delimiters, in abbreviations, or as decimal points.
-Lack of contextual metadata, which is essential for resolving ambiguities in complex scenarios.
+Limitations: Do not differentiate between periods used as sentence delimiters, in abbreviations, or as decimal points. Lack of contextual metadata, which is essential for resolving ambiguities in complex scenarios.
 
 2. **Specialized Punctuation Datasets**
 Universal Dependencies (UD) Corpora: Annotates punctuation as part of syntactic structure but treats periods generically, without considering their multifunctional nature.
 GUM Corpus (Georgetown University Multilayer Corpus): While it provides richer context, the dataset still lacks focused examples for distinguishing abbreviations, decimals, and sentence-ending periods.
 
-Limitations:
-Often include small subsets of punctuation-specific annotations.
-Fail to provide diverse linguistic contexts, such as informal text (e.g., social media), where period usage can differ significantly.
+Limitations: Often include small subsets of punctuation-specific annotations. Fail to provide diverse linguistic contexts, such as informal text where period usage can differ significantly.
 
 **Our Dataset Advantages**
 Focus on Period Disambiguation:
