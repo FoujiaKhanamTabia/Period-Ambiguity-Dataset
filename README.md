@@ -30,10 +30,89 @@ Limitations: Often include small subsets of punctuation-specific annotations. Fa
 Focus on Period Disambiguation:
 Specifically curated to distinguish between sentence-ending periods, abbreviations, and decimal points, ensuring precise annotations.
 
-- Diverse Contexts: Covers formal, informal, and mixed linguistic domains, including conversational texts, technical documents, and user-generated content.
-- Rich Metadata: Includes contextual features such as surrounding words, syntactic roles, and semantic cues to aid machine learning models in accurate classification.
-- Comprehensive Annotations: Annotated by linguistic experts with quality checks, ensuring accuracy and consistency.
-- Machine Learning Ready: Provides structured formats and splits for training, validation, and testing, optimized for machine learning pipelines.
+- **Diverse Contexts**: Covers formal, informal, and mixed linguistic domains, including conversational texts, technical documents, and user-generated content.
+- **Rich Metadata**: Includes contextual features such as surrounding words, syntactic roles, and semantic cues to aid machine learning models in accurate classification.
+- **Comprehensive Annotations**: Annotated by linguistic experts with quality checks, ensuring accuracy and consistency.
+- **Machine Learning Ready**: Provides structured formats and splits for training, validation, and testing, optimized for machine learning pipelines.
 
 This dataset sets a new benchmark in addressing the complexities of terminal punctuation disambiguation, offering researchers a robust foundation for advancing natural language understanding.
+
+# Usage Guide
+This guide explains how to utilize the repository for identifying and disambiguating periods in English text using machine learning techniques. Follow these steps to explore the dataset, train models, and test results:
+
+1. **Prerequisites**
+Ensure you have the following installed:
+
+- Python 3.8 or higher
+- Essential libraries: *numpy*, *pandas*, *scikit-learn*, *tensorflow/pytorch*, *matplotlib*
+- An IDE or environment such as Jupyter Notebook or VS Code
+- Install dependencies using:
+```
+pip install -r requirements.txt  
+```
+
+2. **Dataset Overview**
+The repository provides a pre-processed dataset in CSV and JSON formats. Each entry includes:
+
+- **Text**: Sentence or phrase containing periods.
+- **Labels**: Annotated usage of periods (e.g., *sentence_terminator*, *abbreviation*, *decimal*).
+- **Contextual Features**: Metadata for disambiguation (e.g., *preceding and following words*).
+
+3. **Loading the Dataset**
+Load the dataset for exploration or model training:
+```
+import pandas as pd  
+
+# Load the dataset  
+data = pd.read_csv('data/period_disambiguation_dataset.csv')  
+print(data.head())  
+```
+
+4. **Data Preprocessing**
+Use the provided scripts to preprocess the data for your machine learning pipeline:
+```
+python preprocess.py --input data/period_disambiguation_dataset.csv --output data/processed_data.csv  
+```
+This script performs tasks like tokenization, feature extraction, and splitting data into training and testing sets.
+
+5. **Model Training**
+Train a machine learning model using the pre-configured scripts:
+```
+python train_model.py --model cnn --data data/processed_data.csv --epochs 10  
+```
+*Supported models include*:
+
+- Logistic Regression
+- Decision Trees
+- Convolutional Neural Networks (CNNs)
+- Transformer-based architectures
+
+6. **Model Evaluation**
+Evaluate the trained model on test data:
+```
+python evaluate_model.py --model cnn --data data/test_data.csv  
+```
+The evaluation script outputs precision, recall, F1-score, and confusion matrices to assess performance.
+
+7. **Real-Time Prediction**
+Use the trained model to predict period usage in new text:
+```
+from utils import predict  
+
+text = "Dr. Smith is 3.5 km away from his office."  
+prediction = predict(model='cnn', input_text=text)  
+print(prediction)  
+```
+
+8. **Visualizing Results**
+Generate visualizations to analyze model performance:
+```
+python visualize_results.py --output results/performance_plot.png  
+```
+
+9. **Applications**
+This repository can be used for:
+- Preprocessing text for NLP tasks like machine translation and sentiment analysis
+- Improving tokenization and parsing in downstream linguistic pipelines
+- Training more robust punctuation-specific models
 
